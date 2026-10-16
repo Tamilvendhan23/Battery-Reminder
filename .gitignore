@@ -1,0 +1,51 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+publish/
+publish-framework-dependent/
+artifacts/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.DotSettings.user
+
+# Build results and logs
+*.log
+*.binlog
+msbuild.log
+msbuild.err
+msbuild.wrn
+TestResults/
+*.trx
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Publish / packaging artifacts
+*.zip
+*.pubxml
+*.pubxml.user
+*.publishproj
+
+# Local app data (never commit user settings or logs)
+settings.json
+error.log
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store

@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <StartupObject>BatteryReminder.Program</StartupObject>
+    <RootNamespace>BatteryReminder</RootNamespace>
+    <AssemblyName>BatteryReminder</AssemblyName>
+
+    <!-- Application metadata -->
+    <Title>Battery Reminder</Title>
+    <Product>Battery Reminder for Windows</Product>
+    <Description>Lightweight offline battery reminder: charge alerts, history and tray status.</Description>
+    <Company>Personal Utility</Company>
+    <Version>2.0.0</Version>
+    <FileVersion>2.0.0.0</FileVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+
+    <!-- Release optimizations -->
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+
+    <!-- Standalone single-file -->
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+
+    <!-- Footprint / power: no background GC thread, no workstation concurrency, no event tracing -->
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+    <TieredPGO>false</TieredPGO>
+    <EventSourceSupport>false</EventSourceSupport>
+    <UseSystemResourceKeys>true</UseSystemResourceKeys>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <InvariantGlobalization>true</InvariantGlobalization> <!-- no ICU/culture data loaded; app shows no localized dates -->
+
+    <!-- Trimming stays off: WinForms/NotifyIcon rely on reflection. -->
+    <PublishTrimmed>false</PublishTrimmed>
+  </PropertyGroup>
+
+</Project>
